@@ -1407,7 +1407,7 @@ class _GetItImplementation implements GetIt {
 
   _ServiceFactory? _findFirstFactoryByInstanceOrNull(Object instance) {
     final registeredFactories =
-        _allFactories.where((x) => identical(x.instance, instance));
+    _allFactories.where((x) => identical(x.registrationType, instance));
     return registeredFactories.isEmpty ? null : registeredFactories.first;
   }
 
